@@ -1,7 +1,12 @@
 nav {
     background-color: #2980b9; /* Color alusivo a un banco */
-    padding: 1rem;
+    padding: 0.5rem 1rem; /* Reduce el padding para hacer el navbar menos grueso */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para el navbar */
+    width: 100%;
+    position: fixed; /* Hace que el navbar se fije en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
   }
   
   nav ul {

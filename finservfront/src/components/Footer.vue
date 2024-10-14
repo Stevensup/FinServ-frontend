@@ -11,14 +11,4 @@
   };
   </script>
   
-  <style scoped>
-  footer {
-    background-color: #2980b9; /* Color alusivo a un banco */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  </style>
+  <style scoped src="../styles/Footer.css"></style>

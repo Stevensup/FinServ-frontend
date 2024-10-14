@@ -1,52 +1,52 @@
 .dashboard {
-    padding: 2rem;
-    background-color: #f5f7fa; /* Fondo claro para el dashboard */
-    min-height: 100vh; /* Asegura que el dashboard ocupe toda la altura de la ventana */
-    padding-top: 4rem; /* Añade margen superior para el navbar fijo */
-  }
-  
-  .content {
-    margin-top: 2rem;
-    max-width: 1200px; /* Limita el ancho máximo del contenido */
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem;
-    background-color: #ffffff; /* Fondo blanco para el contenido */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
-  }
-  
-  .stats {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
-    justify-content: space-around;
-    margin-top: 2rem;
-    gap: 1rem; /* Espacio entre las tarjetas */
-  }
-  
+  padding: 2rem;
+  background-color: #f5f7fa; /* Fondo claro para el dashboard */
+  min-height: 100vh; /* Asegura que el dashboard ocupe toda la altura de la ventana */
+  padding-bottom: 4rem; /* Añade margen inferior para el footer fijo */
+}
+
+.content {
+  margin-top: 2rem;
+  max-width: 1200px; /* Limita el ancho máximo del contenido */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  background-color: #ffffff; /* Fondo blanco para el contenido */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+  justify-content: space-around;
+  margin-top: 2rem;
+  gap: 1rem; /* Espacio entre las tarjetas */
+}
+
+.stat-card {
+  background-color: #ecf0f1;
+  padding: 1.5rem; /* Aumenta el padding para más espacio interno */
+  border-radius: 8px;
+  text-align: center;
+  width: calc(25% - 1rem); /* Ajusta el ancho para que las tarjetas se alineen correctamente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+@media (max-width: 768px) {
   .stat-card {
-    background-color: #ecf0f1;
-    padding: 1.5rem; /* Aumenta el padding para más espacio interno */
-    border-radius: 8px;
-    text-align: center;
-    width: calc(25% - 1rem); /* Ajusta el ancho para que las tarjetas se alineen correctamente */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+    width: calc(50% - 1rem); /* Ajusta el ancho para pantallas medianas */
   }
-  
-  .stat-card:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+@media (max-width: 480px) {
+  .stat-card {
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
   }
-  
-  @media (max-width: 768px) {
-    .stat-card {
-      width: calc(50% - 1rem); /* Ajusta el ancho para pantallas medianas */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .stat-card {
-      width: 100%; /* Ajusta el ancho para pantallas pequeñas */
-    }
-  }
+}

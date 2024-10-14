@@ -15,21 +15,4 @@
   };
   </script>
   
-  <style scoped>
-  nav {
-    background-color: #2980b9; /* Color alusivo a un banco */
-    padding: 1rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  </style>
+  <style scoped src="../styles/NavBar.css"></style>

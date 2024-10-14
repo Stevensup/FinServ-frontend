@@ -48,4 +48,4 @@
   };
   </script>
   
-  <style src="@/styles/Dashboard.css"></style>
+  <style src="../styles/Dashboard.css"></style>>
