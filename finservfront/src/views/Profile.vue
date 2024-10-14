@@ -29,7 +29,7 @@
           </div>
           <div class="profile-item">
             <h2>Preferencia de Notificación</h2>
-            <p>{{ user.notificationPreferenceId }}</p>
+            <p>{{ user.notificationPreference.preferenceName }}</p>
           </div>
         </div>
         <button class="edit-button" @click="updateProfile">Editar Perfil</button>
@@ -57,7 +57,9 @@
           phone: '',
           address: '',
           registrationDate: '',
-          notificationPreferenceId: '',
+          notificationPreference: {
+            preferenceName: ''
+          },
           profilePhoto: 'https://avatar.iran.liara.run/public/boy?username=Ash' // URL de la imagen de perfil por defecto
         }
       };
