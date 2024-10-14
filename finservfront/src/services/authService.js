@@ -7,7 +7,8 @@ export default {
     return axios.post(`${API_URL}/login`, { username: email, passwordHash: password })
       .then(response => {
         // Manejar la respuesta exitosa
-        return response.data;
+        console.log('Login exitoso', response.data);
+        return response.data; // Asumiendo que response.data contiene solo el ID del usuario
       })
       .catch(error => {
         if (error.response && error.response.status === 401) {

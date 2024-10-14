@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Login from '@/views/Login.vue';
 import Dashboard from '@/views/Dashboard.vue';
+import ProfileView from '@/views/Profile.vue'; // Importa la vista Profile
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     path: '/Dashboard',
     name: 'DashboardView',
     component: Dashboard
+  },
+  {
+    path: '/profile',
+    name: 'ProfileView',
+    component: ProfileView // Añade la ruta para la vista Profile
   }
 ];
 

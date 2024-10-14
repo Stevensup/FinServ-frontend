@@ -4,7 +4,7 @@
     <form @submit.prevent="login">
       <div>
         <label for="email"></label>
-        <input type="email" v-model="email" id="email"  placeholder="Email" required>
+        <input type="email" v-model="email" id="email" placeholder="Email" required>
       </div>
       <div>
         <label for="password"></label>
@@ -33,10 +33,16 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await authService.login(this.email, this.password);
-        console.log("Login exitoso", response);
+        const userId = await authService.login(this.email, this.password);
+        console.log("Login successful, userId:", userId);
+        
+        // Guarda el ID del usuario en el local storage
+        localStorage.setItem('userId', userId);
+        
+        // Redirige al dashboard
         this.$router.push('/dashboard');
       } catch (error) {
+        console.error('Login fallido:', error);
         this.errorMessage = 'Login fallido: ' + (error.response?.data?.message || 'Error al iniciar sesión');
       }
     }

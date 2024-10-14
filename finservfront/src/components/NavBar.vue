@@ -5,6 +5,7 @@
         <li><a href="/">Inicio</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/profile">Perfil</a></li>
+        <li><a href="/login">Cerrar sesión</a></li>
       </ul>
     </nav>
   </template>

@@ -1,0 +1,80 @@
+.profile {
+    padding: 2rem;
+    background-color: #f0f2f5; /* Fondo claro para el perfil */
+    min-height: 100vh; /* Asegura que el perfil ocupe toda la altura de la ventana */
+    padding-top: 4rem; /* Añade margen superior para el navbar fijo */
+    padding-bottom: 4rem; /* Añade margen inferior para el footer fijo */
+  }
+  
+  .cover-photo {
+    width: 100%;
+    height: 200px;
+    background-color: #1f6391;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la portada */
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-top: -75px; /* Superpone la foto de perfil sobre la portada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la foto de perfil */
+    background-image: url('https://avatar.iran.liara.run/public/boy?username=Ash'); /* Imagen de perfil */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .content {
+    margin-top: 2rem;
+    max-width: 800px; /* Limita el ancho máximo del contenido */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
+    text-align: center; /* Centra el texto */
+  }
+  
+  .profile-details {
+    margin-top: 2rem;
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  .profile-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-item h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2980b9; /* Color alusivo a un banco */
+    flex: 1;
+  }
+  
+  .profile-item p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #333;
+    flex: 2;
+  }
+  
+  .edit-button {
+    background-color: #2980b9; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #1f6391; /* Color del botón al pasar el ratón */
+  }
