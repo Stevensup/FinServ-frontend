@@ -1,0 +1,30 @@
+nav {
+    background-color: #2980b9; /* Color alusivo a un banco */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para el navbar */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+  }
+  
+  nav ul li a:hover {
+    background-color: #1f6391; /* Color de fondo al pasar el ratón */
+    border-radius: 4px; /* Bordes redondeados para el efecto hover */
+  }
