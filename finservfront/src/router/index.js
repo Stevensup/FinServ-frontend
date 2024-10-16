@@ -19,6 +19,11 @@ const routes = [
     path: '/profile',
     name: 'ProfileView',
     component: ProfileView // Añade la ruta para la vista Profile
+  },
+  {
+    path: '/Register',
+    name: 'Register',
+    component: () => import('@/views/Register.vue')
   }
 ];
 
