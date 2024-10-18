@@ -3,6 +3,7 @@
   background-color: #f5f7fa; /* Fondo claro para el dashboard */
   min-height: 100vh; /* Asegura que el dashboard ocupe toda la altura de la ventana */
   padding-bottom: 4rem; /* Añade margen inferior para el footer fijo */
+  margin-top: 8rem; /* Ajusta el margen superior según la altura del navbar */
 }
 
 .content {
@@ -11,7 +12,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  background-color: #ffffff; /* Fondo blanco para el contenido */
+  background-color: #f0f0f0; /* Fondo blanco para el contenido */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
 }
@@ -50,3 +51,12 @@
     width: 100%; /* Ajusta el ancho para pantallas pequeñas */
   }
 }
+.stat-card img {
+  width: 80px; /* Tamaño reducido de la imagen */
+  height: 80px;
+  border-radius: 10px; /* Borde redondeado pero no un círculo completo */
+  object-fit: cover; /* Recorta la imagen para que llene el contenedor */
+  margin-bottom: 1rem; /* Añade espacio entre la imagen y el texto */
+}
+
+

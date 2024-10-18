@@ -11,6 +11,7 @@
         <input type="password" v-model="password" id="password" placeholder="Password" required>
       </div>
       <button type="submit">Login</button>
+      <RouterLink to="/register" class="register-link">¿No tienes cuenta? Regístrate aquí</RouterLink>
     </form>
 
     <!-- Mostrar errores si existen -->

@@ -57,3 +57,8 @@
     text-align: center;
     margin-top: 1rem;
   }
+  .login-link{
+    margin-top: 0.5rem;
+    color: #1f6391;
+    text-decoration: none;
+  }

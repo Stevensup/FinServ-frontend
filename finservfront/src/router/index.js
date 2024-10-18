@@ -1,9 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Login from '@/views/Login.vue';
 import Dashboard from '@/views/Dashboard.vue';
-import ProfileView from '@/views/Profile.vue'; // Importa la vista Profile
+import ProfileView from '@/views/Profile.vue'; 
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/PQR',
+    name: 'Pqr',
+  },
+
   {
     path: '/login',
     name: 'Login',

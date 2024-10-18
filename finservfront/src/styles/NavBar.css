@@ -1,35 +1,35 @@
 nav {
-    background-color: #2980b9; /* Color alusivo a un banco */
-    padding: 0.5rem 1rem; /* Reduce el padding para hacer el navbar menos grueso */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para el navbar */
-    width: 100%;
-    position: fixed; /* Hace que el navbar se fije en la parte superior */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease; /* Transición suave para hover */
-  }
-  
-  nav ul li a:hover {
-    background-color: #1f6391; /* Color de fondo al pasar el ratón */
-    border-radius: 4px; /* Bordes redondeados para el efecto hover */
-  }
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 0.7rem 1.5rem; /* Aumenta el padding para hacer el navbar más grande */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: gray; 
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1rem 2rem; 
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transición para cambiar de color */
+}
+
+nav ul li a:hover {
+  color: black; 
+  border-radius: 4px;
+}

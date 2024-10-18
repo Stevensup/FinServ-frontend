@@ -35,6 +35,7 @@
           </select>
         </div>
         <button type="submit">Registrar</button>
+        <RouterLink to="/login" class="login-link">volver</RouterLink>
       </form>
   
       <!-- Mostrar errores si existen -->
@@ -72,6 +73,7 @@
       async register() {
         try {
           const selectedPreference = this.notificationPreferences.find(preference => preference.id === this.notificationPreferenceId);
+         // const generatedUsername = `${this.firstName}.${this.lastName}`.toLowerCase();
           const response = await fetch("http://localhost:8090/customers/create", {
             method: 'POST',
             headers: {
@@ -83,6 +85,8 @@
               email: this.email,
               phone: this.phone,
               address: this.address,
+              username: this.email,
+              registrationDate: new Date().toISOString(),
               notificationPreference: {
                 preferenceId: this.notificationPreferenceId,
                 preferenceName: selectedPreference ? selectedPreference.preferenceName : ''

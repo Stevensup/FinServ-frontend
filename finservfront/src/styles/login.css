@@ -50,3 +50,8 @@ body {
 .login button:hover {
   background-color: #1f6391; /* Color alusivo a un banco */
 }
+.register-link{
+  margin-top: 0.5rem;
+  color: #1f6391;
+  text-decoration: none;
+}
