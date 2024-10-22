@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Login from '@/views/Login.vue';
 import Dashboard from '@/views/Dashboard.vue';
 import ProfileView from '@/views/Profile.vue'; 
+import CreditCard from '@/views/CreditCard.vue';
+
 
 const routes = [
   {
@@ -12,13 +14,16 @@ const routes = [
     path: '/PQR',
     name: 'Pqr',
   },
-
+  {
+    path: '/creditcard',
+    name: 'CreditCard',
+    component: CreditCard
+  },
   {
     path: '/login',
     name: 'Login',
     component: Login
   },
-  // Otras rutas como el dashboard
   {
     path: '/Dashboard',
     name: 'DashboardView',
@@ -27,7 +32,7 @@ const routes = [
   {
     path: '/profile',
     name: 'ProfileView',
-    component: ProfileView // Añade la ruta para la vista Profile
+    component: ProfileView 
   },
   {
     path: '/Register',

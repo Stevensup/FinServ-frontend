@@ -19,6 +19,10 @@
           <input type="email" v-model="email" id="email" required>
         </div>
         <div>
+          <label for="password">Contraseña</label>
+          <input type="password" v-model="password" id="password" required>
+        </div>
+        <div>
           <label for="phone">Teléfono</label>
           <input type="text" v-model="phone" id="phone" required>
         </div>
@@ -54,6 +58,7 @@
         email: '',
         phone: '',
         address: '',
+        password: '',
         notificationPreferenceId: '',
         notificationPreferences: [],
         errorMessage: ''
@@ -87,6 +92,7 @@
               address: this.address,
               username: this.email,
               registrationDate: new Date().toISOString(),
+              passwordHash: this.password,
               notificationPreference: {
                 preferenceId: this.notificationPreferenceId,
                 preferenceName: selectedPreference ? selectedPreference.preferenceName : ''

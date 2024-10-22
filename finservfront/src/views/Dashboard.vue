@@ -20,7 +20,7 @@
             <h2>Préstamos</h2>
             <p>{{ loans }}</p>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" @click="goToCreditCard">
             <img src="@/assets/tarjeta-de-credito.png" alt="Tarjeta de Crédito">
             <h2>Tarjetas de Crédito</h2>
             <p>{{ creditCards }}</p>
@@ -39,6 +39,7 @@
   <script>
   import NavBarComponent from '@/components/NavBar.vue';
   import FooterComponent from '@/components/Footer.vue';
+
   
   export default {
     name: 'DashboardView',
@@ -54,6 +55,10 @@
         creditCards: 3000,
         insurances: 4000
       };
+    }, methods:{
+      goToCreditCard(){
+        this.$router.push({name: 'CreditCard'})
+      },
     }
   };
   </script>

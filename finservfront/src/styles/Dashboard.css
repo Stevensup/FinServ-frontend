@@ -1,62 +1,62 @@
 .dashboard {
   padding: 2rem;
-  background-color: #f5f7fa; /* Fondo claro para el dashboard */
-  min-height: 100vh; /* Asegura que el dashboard ocupe toda la altura de la ventana */
-  padding-bottom: 4rem; /* Añade margen inferior para el footer fijo */
-  margin-top: 8rem; /* Ajusta el margen superior según la altura del navbar */
+  background-color: #f5f7fa; 
+  min-height: 100vh; 
+  padding-bottom: 4rem; 
+  margin-top: 8rem; 
 }
 
 .content {
   margin-top: 2rem;
-  max-width: 1200px; /* Limita el ancho máximo del contenido */
+  max-width: 1200px; 
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  background-color: #f0f0f0; /* Fondo blanco para el contenido */
+  background-color: #f0f0f0; 
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .stats {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+  flex-wrap: wrap; 
   justify-content: space-around;
   margin-top: 2rem;
-  gap: 1rem; /* Espacio entre las tarjetas */
+  gap: 1rem; 
 }
 
 .stat-card {
   background-color: #ecf0f1;
-  padding: 1.5rem; /* Aumenta el padding para más espacio interno */
+  padding: 1.5rem; 
   border-radius: 8px;
   text-align: center;
-  width: calc(25% - 1rem); /* Ajusta el ancho para que las tarjetas se alineen correctamente */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para hover */
+  width: calc(25% - 1rem); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .stat-card:hover {
-  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
   .stat-card {
-    width: calc(50% - 1rem); /* Ajusta el ancho para pantallas medianas */
+    width: calc(50% - 1rem); 
   }
 }
 
 @media (max-width: 480px) {
   .stat-card {
-    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    width: 100%; 
   }
 }
 .stat-card img {
-  width: 80px; /* Tamaño reducido de la imagen */
+  width: 80px; 
   height: 80px;
-  border-radius: 10px; /* Borde redondeado pero no un círculo completo */
-  object-fit: cover; /* Recorta la imagen para que llene el contenedor */
-  margin-bottom: 1rem; /* Añade espacio entre la imagen y el texto */
+  border-radius: 10px; 
+  object-fit: cover; 
+  margin-bottom: 1rem; 
 }
 
 

@@ -1,25 +1,33 @@
 .register {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+  margin-top: 4rem; /* Ajuste del margen superior */
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 4rem; /* Reducir padding interno */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh; /* Asegura que el contenedor ocupe toda la vista */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  overflow: hidden; /* Elimina la barra de desplazamiento */
+}
   
-  .register h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  
+.register h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 7rem; /* Asegura que el margen superior no sea demasiado grande */
+  color: #333;
+}
+
   .register form {
     display: flex;
     flex-direction: column;
   }
   
   .register form div {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem; /* Reducir espacio entre los campos */
   }
   
   .register label {
@@ -61,4 +69,5 @@
     margin-top: 0.5rem;
     color: #1f6391;
     text-decoration: none;
+    margin-bottom: 3rem;
   }
