@@ -3,12 +3,18 @@ import Login from '@/views/Login.vue';
 import Dashboard from '@/views/Dashboard.vue';
 import ProfileView from '@/views/Profile.vue'; 
 import CreditCard from '@/views/CreditCard.vue';
+import Insurance from '@/views/Insurance.vue';
 
 
 const routes = [
   {
     path: '/',
     redirect: '/login'
+  },
+  {
+    path: '/insurance',
+    name: 'Insurance',
+    component: Insurance
   },
   {
     path: '/PQR',

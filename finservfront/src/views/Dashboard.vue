@@ -15,17 +15,12 @@
             <h2>Inversiones</h2>
             <p>{{ investments }}</p>
           </div>
-          <div class="stat-card">
-            <img src="@/assets/prestamo.png" alt="Prestamo">
-            <h2>Préstamos</h2>
-            <p>{{ loans }}</p>
-          </div>
           <div class="stat-card" @click="goToCreditCard">
             <img src="@/assets/tarjeta-de-credito.png" alt="Tarjeta de Crédito">
             <h2>Tarjetas de Crédito</h2>
             <p>{{ creditCards }}</p>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" @click="goToInsurance"> 
             <img src="@/assets/proteger.png" alt="Seguro">
             <h2>Seguros</h2>
             <p>{{ insurances }}</p>
@@ -59,6 +54,9 @@
       goToCreditCard(){
         this.$router.push({name: 'CreditCard'})
       },
+      goToInsurance(){
+        this.$router.push({name: 'Insurance'})
+      }
     }
   };
   </script>
