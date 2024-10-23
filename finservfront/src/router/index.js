@@ -4,12 +4,18 @@ import Dashboard from '@/views/Dashboard.vue';
 import ProfileView from '@/views/Profile.vue'; 
 import CreditCard from '@/views/CreditCard.vue';
 import Insurance from '@/views/Insurance.vue';
+import Investments from '@/views/Investments.vue';
 
 
 const routes = [
   {
     path: '/',
     redirect: '/login'
+  },
+  {
+    path: '/investments',
+    name: 'Investments',
+    component: Investments
   },
   {
     path: '/insurance',

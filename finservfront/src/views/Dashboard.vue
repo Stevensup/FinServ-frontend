@@ -10,7 +10,7 @@
             <h2>Saldo Total</h2>
             <p>{{ totalBalance }}</p>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" @click="goToInvestments">
             <img src="@/assets/inversion.png" alt="Inversion">
             <h2>Inversiones</h2>
             <p>{{ investments }}</p>
@@ -56,6 +56,9 @@
       },
       goToInsurance(){
         this.$router.push({name: 'Insurance'})
+      },
+      goToInvestments(){
+        this.$router.push({name: 'Investments'})
       }
     }
   };
