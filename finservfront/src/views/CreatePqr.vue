@@ -13,10 +13,10 @@
           <div class="form-group">
             <label for="pqrsType">Tipo de PQRS</label>
             <select v-model="pqrsType" id="pqrsType" required>
-              <option value="PETICION">Petición</option>
-              <option value="QUEJA">Queja</option>
-              <option value="RECLAMO">Reclamo</option>
-              <option value="SUGERENCIA">Sugerencia</option>
+              <option value="Petición">Petición</option>
+              <option value="Queja">Queja</option>
+              <option value="Reclamo">Reclamo</option>
+              <option value="Sugerencia">Sugerencia</option>
             </select>
           </div>
           <div class="form-group">
@@ -30,9 +30,9 @@
           <div class="form-group">
             <label for="status">Estado</label>
             <select v-model="status" id="status" required>
-              <option value="ABIERTO">Abierto</option>
-              <option value="PROCESO">En Proceso</option>
-              <option value="CERRADO">Cerrado</option>
+              <option value="Abierto">Abierto</option>
+              <option value="Proceso">Proceso</option>
+              <option value="Cerrado">Cerrado</option>
             </select>
           </div>
           <button type="submit" class="submit-btn">Crear PQRS</button>
@@ -58,28 +58,24 @@ export default {
     return {
       pqrsType: "",
       description: "",
-      status: "ABIERTO", 
+      status: "Abierto", 
     };
   },
   methods: {
     submitPqr() {
-      
       const userId = localStorage.getItem("userId");
 
-      
       if (!userId) {
         alert("Error: El usuario no está autenticado.");
         return;
       }
 
-      
       const newPqr = {
         customerId: userId, 
         pqrsType: this.pqrsType,
         description: this.description,
         status: this.status,
       };
-
 
       axios
         .post("http://localhost:8090/pqrs/create", newPqr)
@@ -94,6 +90,5 @@ export default {
   },
 };
 </script>
-
 
 <style src="../styles/CreatePqr.css" scoped></style>
