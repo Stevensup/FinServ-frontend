@@ -1,0 +1,99 @@
+<template>
+  <div class="pqr">
+    <NavBarComponent />
+    <div class="pqr-content">
+      <RouterLink to="/PQR" class="dashboard-link">Volver</RouterLink>
+      <div class="card-details">
+        <img src="@/assets/quejarse.png" alt="quejas" />
+        <h2>Crear PQR</h2>
+        <p>Por favor completa los detalles para crear una nueva PQRS.</p>
+      </div>
+      <div class="form-container">
+        <form @submit.prevent="submitPqr">
+          <div class="form-group">
+            <label for="pqrsType">Tipo de PQRS</label>
+            <select v-model="pqrsType" id="pqrsType" required>
+              <option value="PETICION">Petición</option>
+              <option value="QUEJA">Queja</option>
+              <option value="RECLAMO">Reclamo</option>
+              <option value="SUGERENCIA">Sugerencia</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea
+              v-model="description"
+              id="description"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="status">Estado</label>
+            <select v-model="status" id="status" required>
+              <option value="ABIERTO">Abierto</option>
+              <option value="PROCESO">En Proceso</option>
+              <option value="CERRADO">Cerrado</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Crear PQRS</button>
+        </form>
+      </div>
+    </div>
+    <FooterComponent />
+  </div>
+</template>
+
+<script>
+import NavBarComponent from "@/components/NavBar.vue";
+import FooterComponent from "@/components/Footer.vue";
+import axios from "axios";
+
+export default {
+  name: "CreatePqr",
+  components: {
+    NavBarComponent,
+    FooterComponent,
+  },
+  data() {
+    return {
+      pqrsType: "",
+      description: "",
+      status: "ABIERTO", 
+    };
+  },
+  methods: {
+    submitPqr() {
+      
+      const userId = localStorage.getItem("userId");
+
+      
+      if (!userId) {
+        alert("Error: El usuario no está autenticado.");
+        return;
+      }
+
+      
+      const newPqr = {
+        customerId: userId, 
+        pqrsType: this.pqrsType,
+        description: this.description,
+        status: this.status,
+      };
+
+
+      axios
+        .post("http://localhost:8090/pqrs/create", newPqr)
+        .then(() => {
+          alert("PQRS creada con éxito");
+          this.$router.push("/PQR"); 
+        })
+        .catch((error) => {
+          console.error("Error creando PQRS:", error);
+        });
+    },
+  },
+};
+</script>
+
+
+<style src="../styles/CreatePqr.css" scoped></style>

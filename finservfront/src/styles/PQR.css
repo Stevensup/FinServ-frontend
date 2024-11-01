@@ -1,0 +1,82 @@
+.pqr {
+    padding: 2rem;
+    min-height: 100vh;
+    max-height: fit-content;
+    padding-bottom: 4rem;
+    margin-top: 8rem;
+  }
+  
+  .pqr-content {
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .card-details img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .card-details h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+  }
+  
+  .card-details p {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  
+  .actions button {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actions button:hover {
+    background-color: #3498db;
+  }
+
+  .dashboard-link{
+    margin-top: 0.5rem;
+    color: #1f6391;
+    text-decoration: none;
+    margin-bottom: 3rem;
+  }
+  
+  @media (max-width: 768px) {
+    .credit-card-content {
+      width: 90%;
+    }
+  
+    .actions {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }

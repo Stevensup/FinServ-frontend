@@ -5,12 +5,25 @@ import ProfileView from '@/views/Profile.vue';
 import CreditCard from '@/views/CreditCard.vue';
 import Insurance from '@/views/Insurance.vue';
 import Investments from '@/views/Investments.vue';
+import Pqrs from '@/views/Pqrs.vue';
+import CreatePqr from '@/views/CreatePqr.vue';
+import ViewPqrs from '@/views/ViewPqrs.vue';
 
 
 const routes = [
   {
     path: '/',
     redirect: '/login'
+  },
+  {
+    path: '/createPqr',  
+    name: 'CreatePqr',
+    component: CreatePqr,  
+  },
+  {
+    path: '/viewPqr',
+    name: 'viewPqr',
+    component : ViewPqrs
   },
   {
     path: '/investments',
@@ -25,6 +38,7 @@ const routes = [
   {
     path: '/PQR',
     name: 'Pqr',
+    component: Pqrs
   },
   {
     path: '/creditcard',

@@ -1,0 +1,79 @@
+.pqr {
+  padding: 2rem;
+  min-height: 100vh;
+  margin-top: 8rem;
+  padding-bottom: 4rem;
+  background-color: #f4f6f9;
+}
+
+.pqr-content {
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pqr-link {
+  display: inline-block;
+  color: #1f6391;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.pqr-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.pqr-table th,
+.pqr-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #34495e;
+}
+
+.pqr-table th {
+  background-color: #f0f3f5;
+  font-weight: bold;
+}
+
+.pqr-table td {
+  background-color: #ffffff;
+}
+
+.edit-button,
+.delete-button,
+.finalize-button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 0.5rem;
+}
+
+.edit-button:hover,
+.delete-button:hover,
+.finalize-button:hover {
+  background-color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .pqr-content {
+      width: 90%;
+      padding: 1rem;
+  }
+
+  .actions {
+      flex-direction: column;
+      gap: 1rem;
+  }
+}
