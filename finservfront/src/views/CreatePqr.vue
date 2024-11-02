@@ -27,14 +27,6 @@
               required
             ></textarea>
           </div>
-          <div class="form-group">
-            <label for="status">Estado</label>
-            <select v-model="status" id="status" required>
-              <option value="Abierto">Abierto</option>
-              <option value="Proceso">Proceso</option>
-              <option value="Cerrado">Cerrado</option>
-            </select>
-          </div>
           <button type="submit" class="submit-btn">Crear PQRS</button>
         </form>
       </div>
@@ -58,7 +50,6 @@ export default {
     return {
       pqrsType: "",
       description: "",
-      status: "Abierto", 
     };
   },
   methods: {
@@ -74,17 +65,17 @@ export default {
         customerId: userId, 
         pqrsType: this.pqrsType,
         description: this.description,
-        status: this.status,
+        status: "Abierto", 
       };
 
       axios
         .post("http://localhost:8090/pqrs/create", newPqr)
         .then(() => {
-          alert("PQRS creada con éxito");
+          alert("PQR creada con éxito");
           this.$router.push("/PQR"); 
         })
         .catch((error) => {
-          console.error("Error creando PQRS:", error);
+          console.error("Error creando PQR:", error);
         });
     },
   },

@@ -15,6 +15,11 @@
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: max-width 0.3s ease; 
+}
+
+.pqr-list.editing-mode .pqr-content {
+  max-width: 1000px; 
 }
 
 .pqr-link {
@@ -28,6 +33,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 1.5rem;
+  table-layout: fixed; 
 }
 
 .pqr-table th,
@@ -36,6 +42,7 @@
   border: 1px solid #ddd;
   text-align: left;
   color: #34495e;
+  word-wrap: break-word; 
 }
 
 .pqr-table th {
@@ -47,17 +54,37 @@
   background-color: #ffffff;
 }
 
+.pqr-table .description-cell {
+  max-height: 100px; 
+  overflow-y: auto;  
+}
+
+.description-input {
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 0.3rem; 
+  justify-content: flex-start; 
+}
+
 .edit-button,
 .delete-button,
 .finalize-button {
   background-color: #2980b9;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.8rem; 
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-right: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .edit-button:hover,
@@ -68,12 +95,12 @@
 
 @media (max-width: 768px) {
   .pqr-content {
-      width: 90%;
-      padding: 1rem;
+    width: 90%;
+    padding: 1rem;
   }
 
   .actions {
-      flex-direction: column;
-      gap: 1rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 }

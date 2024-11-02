@@ -1,5 +1,5 @@
 <template>
-  <div class="pqr-list">
+  <div :class="['pqr-list', { 'editing-mode': isEditing }]">
     <NavBarComponent />
     <div class="pqr-content">
       <RouterLink to="/PQR" class="pqr-link">Volver</RouterLink>
@@ -17,9 +17,9 @@
         <tbody>
           <tr v-for="pqr in pqrsList" :key="pqr.pqrsId">
             <td>{{ pqr.pqrsType }}</td>
-            <td>
+            <td class="description-cell">
               <div v-if="pqr.isEditing">
-                <input v-model="pqr.description" />
+                <input v-model="pqr.description" class="description-input" />
               </div>
               <div v-else>
                 {{ pqr.description }}
@@ -28,9 +28,11 @@
             <td>{{ pqr.status }}</td>
             <td>{{ new Date(pqr.creationDate).toLocaleString() }}</td>
             <td>
-              <button v-if="!pqr.isEditing" @click="enableEdit(pqr)" class="edit-button">Editar</button>
-              <button v-if="pqr.isEditing" @click="finalizeEdit(pqr)" class="finalize-button">Finalizar</button>
-              <button @click="deletePqr(pqr.pqrsId)" class="delete-button">Eliminar</button>
+              <div class="actions">
+                <button v-if="!pqr.isEditing" @click="enableEdit(pqr)" class="edit-button">Editar</button>
+                <button v-if="pqr.isEditing" @click="finalizeEdit(pqr)" class="finalize-button">Finalizar</button>
+                <button @click="deletePqr(pqr.pqrsId)" class="delete-button">Eliminar</button>
+              </div>
             </td>
           </tr>
         </tbody>
@@ -56,6 +58,11 @@ export default {
       pqrsList: [],
     };
   },
+  computed: {
+    isEditing() {
+      return this.pqrsList.some(pqr => pqr.isEditing);
+    }
+  },
   mounted() {
     this.fetchPqrs();
   },
@@ -78,18 +85,30 @@ export default {
           }
         })
         .catch((error) => {
-          console.error("Error obteniendo las PQRS:", error);
+          console.error("Error obteniendo las PQR:", error);
         });
     },
     enableEdit(pqr) {
       pqr.isEditing = true;
     },
     finalizeEdit(pqr) {
+      if (!pqr.description) {
+        alert("La descripción no puede estar vacía.");
+        return;
+      }
+      if (pqr.description.length > 500) {
+        alert("La descripción no puede exceder los 500 caracteres.");
+        return;
+      }
+
       axios
         .put(`http://localhost:8090/pqrs/update/${pqr.pqrsId}`, { description: pqr.description })
         .then(() => {
-          pqr.isEditing = false;
           alert("Descripción actualizada con éxito.");
+          // Agrega un pequeño retraso antes de quitar el modo de edición para que la animación sea visible
+          setTimeout(() => {
+            pqr.isEditing = false;
+          }, 100);
         })
         .catch((error) => {
           console.error("Error al actualizar la descripción:", error);
@@ -97,7 +116,7 @@ export default {
         });
     },
     deletePqr(pqrsId) {
-      if (confirm("¿Estás seguro de que deseas eliminar esta PQRS?")) {
+      if (confirm("¿Estás seguro de que deseas eliminar esta PQR?")) {
         axios
           .delete(`http://localhost:8090/pqrs/delete/${pqrsId}`)
           .then(() => {
@@ -105,7 +124,7 @@ export default {
             alert("PQRS eliminada con éxito.");
           })
           .catch((error) => {
-            console.error("Error al eliminar la PQRS:", error);
+            console.error("Error al eliminar la PQR:", error);
           });
       }
     },
