@@ -8,6 +8,8 @@ import Investments from '@/views/Investments.vue';
 import Pqrs from '@/views/Pqrs.vue';
 import CreatePqr from '@/views/CreatePqr.vue';
 import ViewPqrs from '@/views/ViewPqrs.vue';
+import CreateInsurance from '@/views/CreateInsurance.vue';
+import ViewInsurance from '@/views/ViewInsurance.vue';
 
 
 const routes = [
@@ -16,9 +18,19 @@ const routes = [
     redirect: '/login'
   },
   {
+    path: '/viewInsurance',
+    name: 'ViewInsurance',
+    component: ViewInsurance
+  },
+  {
+    path: '/createInsurance',
+    name: 'CreateInsurance',
+    component: CreateInsurance
+  },
+  {
     path: '/createPqr',  
     name: 'CreatePqr',
-    component: CreatePqr,  
+    component: CreatePqr  
   },
   {
     path: '/viewPqr',

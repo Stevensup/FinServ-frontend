@@ -9,8 +9,8 @@
           <p>Administra y visualiza tus Seguros fácilmente.</p>
         </div>
         <div class="actions">
-          <button @click="visualizarSeguro">Visualizar Seguros</button>
-          <button @click="solicitarSeguro">Agregar seguro</button>
+          <button @click="createInsurance">Solicitar seguro</button>
+          <button @click="getInsurance">Visualizar seguros</button>
         </div>
       </div>
       <FooterComponent />
@@ -28,13 +28,11 @@
         FooterComponent,
     },
     methods: {
-        visualizarSeguro() {
-        // Aquí puedes agregar la lógica para visualizar Seguro
-        alert('Solicitud de tarjeta iniciada');
+        createInsurance() {
+        this.$router.push({name:'CreateInsurance'})
         },
-        solicitarSeguro() {
-        // Aquí puedes agregar la lógica para solicitar Seguro
-        alert('Visualizando tarjeta de crédito');
+        getInsurance() {
+        this.$router.push({name:'ViewInsurance'})
         },
     },
     };
