@@ -19,7 +19,7 @@
             <td>{{ pqr.pqrsType }}</td>
             <td class="description-cell">
               <div v-if="pqr.isEditing">
-                <input v-model="pqr.description" class="description-input" />
+                <input v-model="pqr.description" maxlength="250" class="description-input" />
               </div>
               <div v-else>
                 {{ pqr.description }}
@@ -92,20 +92,20 @@ export default {
       pqr.isEditing = true;
     },
     finalizeEdit(pqr) {
-      if (!pqr.description) {
-        alert("La descripción no puede estar vacía.");
+      // Validación de descripción
+      if (!pqr.description.trim()) {
+        alert("La descripción no puede estar vacía o contener solo espacios.");
         return;
       }
-      if (pqr.description.length > 500) {
-        alert("La descripción no puede exceder los 500 caracteres.");
+      if (pqr.description.length > 250) {
+        alert("La descripción no puede exceder los 250 caracteres.");
         return;
       }
 
       axios
-        .put(`http://localhost:8090/pqrs/update/${pqr.pqrsId}`, { description: pqr.description })
+        .put(`http://localhost:8090/pqrs/update/${pqr.pqrsId}`, { description: pqr.description.trim() })
         .then(() => {
           alert("Descripción actualizada con éxito.");
-          // Agrega un pequeño retraso antes de quitar el modo de edición para que la animación sea visible
           setTimeout(() => {
             pqr.isEditing = false;
           }, 100);
@@ -131,7 +131,5 @@ export default {
   },
 };
 </script>
-
-
 
 <style src="../styles/ViewPqrs.css" scoped></style>

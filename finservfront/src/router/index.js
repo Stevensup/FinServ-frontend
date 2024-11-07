@@ -10,12 +10,24 @@ import CreatePqr from '@/views/CreatePqr.vue';
 import ViewPqrs from '@/views/ViewPqrs.vue';
 import CreateInsurance from '@/views/CreateInsurance.vue';
 import ViewInsurance from '@/views/ViewInsurance.vue';
+import ViewCreditCard from '@/views/ViewCreditCard.vue';
+import CreateCreditCard from '@/views/CreateCreditCard.vue';
 
 
 const routes = [
   {
     path: '/',
     redirect: '/login'
+  },
+  {
+    path: '/createCreditCard',
+    name: 'CreateCreditCard',
+    component: CreateCreditCard
+  },
+  {
+    path: '/viewCreditCard',
+    name:'ViewCreditCard',
+    component: ViewCreditCard
   },
   {
     path: '/viewInsurance',

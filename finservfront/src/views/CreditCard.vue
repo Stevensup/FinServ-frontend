@@ -9,8 +9,8 @@
           <p>Administra y visualiza tus tarjetas de crédito fácilmente.</p>
         </div>
         <div class="actions">
-          <button @click="solicitarTarjeta">Solicitar una tarjeta de crédito</button>
-          <button @click="visualizarTarjeta">Visualizar tarjeta de crédito</button>
+          <button @click="createCreditCard">Solicitar una tarjeta de crédito</button>
+          <button @click="getCreditCard">Visualizar tarjeta de crédito</button>
         </div>
       </div>
       <FooterComponent />
@@ -21,6 +21,7 @@
     import NavBarComponent from '@/components/NavBar.vue';
     import FooterComponent from '@/components/Footer.vue';
 
+
     export default {
     name: 'CreditCard',
     components: {
@@ -28,13 +29,11 @@
         FooterComponent,
     },
     methods: {
-        solicitarTarjeta() {
-        // Aquí puedes agregar la lógica para solicitar una tarjeta
-        alert('Solicitud de tarjeta iniciada');
+        createCreditCard() {
+          this.$router.push({name: 'CreateCreditCard'})
         },
-        visualizarTarjeta() {
-        // Aquí puedes agregar la lógica para visualizar la tarjeta
-        alert('Visualizando tarjeta de crédito');
+        getCreditCard() {
+          this.$router.push({name: 'ViewCreditCard'})
         },
     },
     };

@@ -25,6 +25,7 @@
               v-model="description"
               id="description"
               required
+              maxlength="250"
             ></textarea>
           </div>
           <button type="submit" class="submit-btn">Crear PQRS</button>
@@ -61,18 +62,24 @@ export default {
         return;
       }
 
+      // Verificar que la descripción no esté vacía o solo contenga espacios
+      if (!this.description.trim()) {
+        alert("La descripción no puede estar vacía o contener solo espacios.");
+        return;
+      }
+
       const newPqr = {
-        customerId: userId, 
+        customerId: userId,
         pqrsType: this.pqrsType,
-        description: this.description,
-        status: "Abierto", 
+        description: this.description.trim(),
+        status: "Abierto",
       };
 
       axios
         .post("http://localhost:8090/pqrs/create", newPqr)
         .then(() => {
           alert("PQR creada con éxito");
-          this.$router.push("/PQR"); 
+          this.$router.push("/PQR");
         })
         .catch((error) => {
           console.error("Error creando PQR:", error);
@@ -81,5 +88,6 @@ export default {
   },
 };
 </script>
+
 
 <style src="../styles/CreatePqr.css" scoped></style>
