@@ -2,7 +2,7 @@
   <div class="credit-card-list">
     <NavBarComponent />
     <div class="card-content">
-      <RouterLink to="/creditcard" class="dashboard-link">Volver</RouterLink>
+      <RouterLink to="/creditcard" class="creditCard-link">Volver</RouterLink>
       <h2>Listado de Tarjetas de Crédito</h2>
       <div class="card-table-container">
         <table class="card-table">

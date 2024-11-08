@@ -12,12 +12,23 @@ import CreateInsurance from '@/views/CreateInsurance.vue';
 import ViewInsurance from '@/views/ViewInsurance.vue';
 import ViewCreditCard from '@/views/ViewCreditCard.vue';
 import CreateCreditCard from '@/views/CreateCreditCard.vue';
-
+import CreateInvestments from '@/views/CreateInvestments.vue';
+import ViewInvestments from '@/views/ViewInvestments.vue';
 
 const routes = [
   {
     path: '/',
     redirect: '/login'
+  },
+  {
+    path: '/createInvestments',
+    name: 'CreateInvestments',
+    component: CreateInvestments,
+  },
+  {
+    path: '/viewInvestments',
+    name: 'ViewInvestments',
+    component: ViewInvestments,
   },
   {
     path: '/createCreditCard',

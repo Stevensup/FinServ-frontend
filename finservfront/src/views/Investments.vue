@@ -9,7 +9,8 @@
           <p>Administra y visualiza tus inversiones fácilmente.</p>
         </div>
         <div class="actions">
-          <button @click="visualizarInversion">Visualizar Inversion</button>
+          <button @click="createInvestments">Crear Inversion</button>
+          <button @click="getInvestments">Visualizar Inversion</button>
         </div>
       </div>
       <FooterComponent />
@@ -27,9 +28,11 @@
         FooterComponent,
     },
     methods: {
-        visualizarInversion() {
-        // Aquí puedes agregar la lógica para visualizar inversion
-        alert('Visualizando inversion');
+        createInvestments() {
+          this.$router.push({name:'CreateInvestments'})
+        },
+        getInvestments() {
+          this.$router.push({name:'ViewInvestments'})
         },
     },
     };

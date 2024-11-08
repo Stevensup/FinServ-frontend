@@ -1,0 +1,32 @@
+.investment-content {
+    margin-top: 2rem;
+    max-width: 900px;
+    margin: auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .investment-table-container {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .investment-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .investment-table th,
+  .investment-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .investment-table th {
+    background-color: #f0f3f5;
+    font-weight: bold;
+  }
+  
